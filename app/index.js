@@ -1,12 +1,26 @@
-import React from "react";
-import { Stack } from "expo-router";
-import { View, Text } from "react-native";
+import React, { useState } from "react";
+import { Stack, useRouter } from "expo-router";
+import { View, ScrollView, SafeAreaView, Text } from "react-native";
 
+import { COLORS, icons, image, SIZES, FONTS } from "../constants";
+import {
+  NearbyJobs,
+  PopularJobs,
+  ScreenHeaderBtn,
+  welcome,
+} from "../components";
 const index = () => {
+  const router = useRouter();
   return (
-    <View>
-      <Text>Okikiola</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightWhite }}>
+      <Stack.Screen
+        options={{
+          headerStyle: {
+            backgroundColor: COLORS.lightWhite,
+          },
+        }}
+      />
+    </SafeAreaView>
   );
 };
 
