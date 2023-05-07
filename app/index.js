@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Stack, useRouter } from "expo-router";
 import { View, ScrollView, SafeAreaView, Text } from "react-native";
 
-import { COLORS, icons, image, SIZES, FONTS } from "../constants";
+import { COLORS, icons, images, SIZES, FONTS } from "../constants";
 import {
-  NearbyJobs,
-  PopularJobs,
+  Nearbyjobs,
+  Popularjobs,
   ScreenHeaderBtn,
-  welcome,
+  Welcome,
 } from "../components";
 const index = () => {
   const router = useRouter();
@@ -18,8 +18,23 @@ const index = () => {
           headerStyle: {
             backgroundColor: COLORS.lightWhite,
           },
+          title: "",
+          headerShadowVisible: false,
+          headerLeft: () => (
+            <ScreenHeaderBtn iconUrl={icons.menu} dimension="60%" />
+          ),
+          headerRight: () => (
+            <ScreenHeaderBtn iconUrl={images.profile} dimension="100%" />
+          ),
         }}
       />
+      <ScrollView showsVerticalScrollIndicator={false}>
+        <View style={{ flex: 1, padding: SIZES.medium }}>
+          <Welcome />
+          <Popularjobs />
+          <Nearbyjobs />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };
