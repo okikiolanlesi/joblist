@@ -41,7 +41,13 @@ const Popularjobs = () => {
           <FlatList
             data={data}
             renderItem={({ item }) => (
-              <PopularJobCard item={item} selectedTab={"tttt"} />
+              <PopularJobCard
+                item={item}
+                selectedTab={"tttt"}
+                handleCardPress={() => {
+                  router.push(`job-details/${item.job_id}`);
+                }}
+              />
             )}
             keyExtractor={(item) => item.job_id}
             contentContainerStyle={{ columnGap: SIZES.medium }}
