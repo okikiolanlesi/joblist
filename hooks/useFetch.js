@@ -16,7 +16,7 @@ export default useFetch = (endpoint, query) => {
       ...query,
     },
     headers: {
-      "X-RapidAPI-Key": "9a31c1d544msh4b7902ef88d0275p11ad22jsn284151fdcaba",
+      "X-RapidAPI-Key": "f7e4254fabmshfa040bac05dcc9cp1a64f2jsn76530ec110b8",
       "X-RapidAPI-Host": "jsearch.p.rapidapi.com",
     },
   };

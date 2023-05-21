@@ -14,7 +14,7 @@ const Company = ({ companyName, companyLogo, jobTitle, location }) => {
               ? companyLogo
               : "https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png",
           }}
-          styles={styles.logoImage}
+          style={styles.logoImage}
         />
       </View>
       <View style={styles.jobTitleBox}>
